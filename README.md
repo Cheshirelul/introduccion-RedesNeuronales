@@ -1,2 +1,5 @@
 # Introducción a Redes Neuronales
-*Prueba* 
+*Este repositorio esta en construcción :D* 
+
+
+See you alter !
