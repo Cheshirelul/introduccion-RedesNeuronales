@@ -3,3 +3,10 @@
 
 
 See you later !
+
+
+
+# Fuentes y/o consultados:
+
+- https://github.com/SandraFB/Taller_Keras
+- 
