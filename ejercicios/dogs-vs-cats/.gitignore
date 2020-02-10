@@ -1,0 +1,8 @@
+dataset_dogs_vs_cats/
+dataset_dogs_vs_cats/test
+test1/
+train/
+dogs_vs_cats_labels.npy
+dogs_vs_cats_photos.npy
+test1.zip
+train.zip

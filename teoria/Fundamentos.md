@@ -41,11 +41,11 @@ es decir, el conocimiento se encuentra distribuido por las sinapsis de la red. D
 La neurona trata a muchos valores de entrada como si fueran uno solo; esto recibe el nombre de entrada global.
 Los valores de entrada se multiplican por los pesos anteriormente ingresados a la neurona. Por consiguiente, los pesos que generalmente no están restringidos cambian la medida de influencia que tienen los valores de entrada. Es decir, que permiten que un gran valor de entrada tenga solamente una pequeña influencia, si estos son lo suficientemente pequeños.
 
-## Función de activación (activation function).
+## Función de activación (activation function)
 
 Una neurona biológica puede estar activa (excitada) o inactiva (no excitada); es decir, que tiene un “estado de activación”. Las neuronas artificiales también tienen diferentes estados de activación; algunas de ellas solamente dos,al igual que las biológicas, pero otras pueden tomar cualquier valor dentro de un conjunto determinado.
 
-## Función de salida (output function).
+## Función de salida (output function)
 
 El último componente que una neurona necesita es la función de salida. El valor resultante de esta función es la salida de la neurona i (outi); por ende, la función de salida determina que valor se transfiere a las neuronas vinculadas. Si la función de activación está por debajo de un umbral determinado, ninguna salida se pasa a la neurona subsiguiente. Normalmente, no cualquier valor es permitido como una entrada para una neurona, por lo tanto, los valores de salida están comprendidos en el rango [0, 1] o [-1, 1]. También pueden ser binarios {0, 1} o {-1, 1}.
 
