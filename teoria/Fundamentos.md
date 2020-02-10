@@ -19,55 +19,45 @@ Mediante este entrenamiento o aprendizaje, las RNA crean su propia representaci�
 - Funcionan en paralelo
   - Muchas neuronas pueden estar trabajando al mismo tiempo
 
-*Biológicamente, se suele aceptar que el conocimiento está más relacionado con las conexiones entre neuronas que con las propias neuronas* (Alkon, 1989;Shepherd, 1990);
-es decir, el conocimiento se encuentra distribuido por las sinapsis de la red. De forma análoga, en el caso de las RNA se puede considerar que el conocimiento se encuentra representado en los pesos de las conexiones entre neuronas.
 <center><img src="neuronaBiologica.png"></center>
 
+# Elementos básicos
 
+A continuación se muestra la estructura básica de una red neuronal.
 
-# Regularización con Dropout
+<center><img src="redNeuronal.png"></center>
 
-## ¿Qué es?
+La misma está constituida por neuronas interconectadas y arregladas en tres capas (esto último puede variar). Los datos ingresan por medio de la “capa de entrada”, pasan a través de la “capa oculta” y salen por la “capa de salida”. Cabe mencionar que la capa oculta puede estar constituida por varias capas.
 
-- Tecnica de regularizacion
-- Es aplicada sobre modelos
-- Propuesta por Srivastava, et al.
+Ahora que ya se explico un poco la estructura básica de una red neuronal y su parentezco con una red biologica vamos a hacer una comparacion un poco más grafica.
 
-## En que consiste?
+<center><img src="comparacionBiovsArt.png"></center>
 
-Durante el entrenamiento se selecciona *neuronas* de manera aleatoria cuando se esta entrenando el modelo y dichas neuronas son ignoradas.
+*Biológicamente, se suele aceptar que el conocimiento está más relacionado con las conexiones entre neuronas que con las propias neuronas* (Alkon, 1989;Shepherd, 1990);
+es decir, el conocimiento se encuentra distribuido por las sinapsis de la red. De forma análoga, en el caso de las RNA se puede considerar que el conocimiento se encuentra representado en los pesos de las conexiones entre neuronas.
 
-- La activación de las neuronas es temporalmente removida
-- Cualquier actualizacion de pesos no son aplicadas a la neurona predecesora
-- Otras neuronas tendran que intervenir durante el entramiento, por lo que la red generara nuevo conocimiento.
+## Función de entrada (input function)
 
-Esto daria como resultado multiples interpretaciones internas que seran aprendidas por la red. El efecto es que la red se vuelve menos sensible a los pesos específicos de las neuronas. Esto a su vez da como resultado una red que es capaz de una mejor generalización y es menos probable que sobreajuste los datos de entrenamiento.
+La neurona trata a muchos valores de entrada como si fueran uno solo; esto recibe el nombre de entrada global.
+Los valores de entrada se multiplican por los pesos anteriormente ingresados a la neurona. Por consiguiente, los pesos que generalmente no están restringidos cambian la medida de influencia que tienen los valores de entrada. Es decir, que permiten que un gran valor de entrada tenga solamente una pequeña influencia, si estos son lo suficientemente pequeños.
 
-# Usando Dropout Regularization en Keras
+## Función de activación (activation function).
 
-¿Que debemos saber?
+Una neurona biológica puede estar activa (excitada) o inactiva (no excitada); es decir, que tiene un “estado de activación”. Las neuronas artificiales también tienen diferentes estados de activación; algunas de ellas solamente dos,al igual que las biológicas, pero otras pueden tomar cualquier valor dentro de un conjunto determinado.
 
-- Necesita un porcentaje
-  - Este porcentaje sera usado como base para la probabilidad de que una neurona sea descartada.
-- No se usa durante la evaluación
-  - Esto unicamente afectara al modelo cuando este siendo entrenado.
+## Función de salida (output function).
 
-## Aplicar Dropout en la capa visible.
+El último componente que una neurona necesita es la función de salida. El valor resultante de esta función es la salida de la neurona i (outi); por ende, la función de salida determina que valor se transfiere a las neuronas vinculadas. Si la función de activación está por debajo de un umbral determinado, ninguna salida se pasa a la neurona subsiguiente. Normalmente, no cualquier valor es permitido como una entrada para una neurona, por lo tanto, los valores de salida están comprendidos en el rango [0, 1] o [-1, 1]. También pueden ser binarios {0, 1} o {-1, 1}.
 
-Este metodo de generalizacion puede ser empleado tanto en las capas ocultas de nuestra red neuronal, como en las neuronas de entrada.
-- Para hacer uso de esta tecnica en Keras y aplicarlo en la capa visible, debemos de declararlo justo antes de la primer capa oculta.
-- En el paper original sobre Dropout, nos va la recomendación de poner un *kernel_constrain* con un *max_norm* de 3.
+La función activación calcula el estado de actividad de una neurona; transformando la entrada global (menos el umbral, Θi) en un valor (estado) de activación, cuyo rango normalmente va de (0 a 1) o de (–1 a 1). Esto es así, porque una neurona puede estar totalmente inactiva (0 o –1) o activa (1).
 
-## Usando Dropout en capas ocultas.
+# Niveles o capas de una red neuronal
 
-Al igual que en las neuronas visibles, dropout puede ser empleado en las neuronas de las capas ocultas.
+La distribución de neuronas dentro de la red se realiza formando niveles o capas, con un número determinado de dichas neuronas en cada una de ellas. A partir de su situación dentro de la red, se pueden distinguir tres tipos de capas
 
-En algunas ocaciones el usar Dropout en capas ocultas podria no representar una mejora, incluso podria tener un rendimiento peor que el modelo original.
-
-# Consejos para usar Dropout
-
-- Usar valores de dropout entre **20%-50%**, como valor inicial al usar dropout en un modelo se recomienda el 20%. Dar valores muy bajos podrian tener une fecto minimo y emplear valores demasiado altos podrian hacer que no aprenda neustra red.
-- Usar redes neuronales largas, es probable que se obtenga un mejor rendimiento puesto que da la oportunidad de aprender representaciones independientes a las neuronas que comprenden la red.
-- Usar esta tecnica tanto en neuronas ocultas como en las de entrada (visibles). En cada capa la red da buenos resultados.
-- Use una gran *tasa de aprendizaje*(learning rate) con decadencia y un gran *momentum*. Aumente su *tasa de aprendizaje* en un factor de 10 a 100 y use un valor de *momentum* alto de 0.9 o 0.99.
-- Restringir el tamaño de los *pesos* de la red. Un *learning rate* alto puede dar lugar a *pesos* de red muy grandes. Se ha demostrado que imponer una restricción en el tamaño de los *pesos* de la red, como la regularización de max-norm con un tamaño de 4 o 5, mejora los resultados.
+- **De entrada**
+  - Es la capa que recibe directamente la información proveniente de las fuentes externas de la red.
+- **Ocultas**
+  - son internas a la red y no tienen contacto directo con el entorno exterior. El número de niveles ocultos puede estar entre cero y un número elevado. Las neuronas de las capas ocultas pueden estar interconectadas de distintas maneras, lo que determina, junto con su número, las distintas topologías de redes neuronales.
+- **De salidas**
+  - Transfieren información de la red hacia el exterior.
