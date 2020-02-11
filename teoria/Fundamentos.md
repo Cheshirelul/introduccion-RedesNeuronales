@@ -1,5 +1,5 @@
 
-# ¿Qué es una red neuronal?
+# ¿Qué es una red neuronal artificial (RNA)?
 
 *Las RNA son sistemas de procesamiento de la información cuya estructura y funcionamiento están inspirados en las redes neuronales biológicas.* (Hilera y Martínez, 1995).
 
@@ -58,6 +58,6 @@ La distribución de neuronas dentro de la red se realiza formando niveles o capa
 - **De entrada**
   - Es la capa que recibe directamente la información proveniente de las fuentes externas de la red.
 - **Ocultas**
-  - son internas a la red y no tienen contacto directo con el entorno exterior. El número de niveles ocultos puede estar entre cero y un número elevado. Las neuronas de las capas ocultas pueden estar interconectadas de distintas maneras, lo que determina, junto con su número, las distintas topologías de redes neuronales.
+  - Son internas a la red y no tienen contacto directo con el entorno exterior. El número de niveles ocultos puede estar entre cero y un número elevado. Las neuronas de las capas ocultas pueden estar interconectadas de distintas maneras, lo que determina, junto con su número, las distintas topologías de redes neuronales.
 - **De salidas**
   - Transfieren información de la red hacia el exterior.
