@@ -1,5 +1,5 @@
 
-# ¿Qué es una red neuronal artificial (RNA)?
+# ¿Qué es una red neuronal artificial (RNA)
 
 *Las RNA son sistemas de procesamiento de la información cuya estructura y funcionamiento están inspirados en las redes neuronales biológicas.* (Hilera y Martínez, 1995).
 
