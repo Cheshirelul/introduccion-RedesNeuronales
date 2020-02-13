@@ -2,7 +2,7 @@
 
 En este modelo utilizamos transfer learning a partir del modelo VGG16 + Fully connected Layers.
 
-<center><img src="VGG16.png"></center>
+<center><img src="vgg16.png"></center>
 
 # Resultados:
 
@@ -14,3 +14,7 @@ En este modelo utilizamos transfer learning a partir del modelo VGG16 + Fully co
 
 Se recomienda realizar el ejercicio y modificar los valores de hiperparámetros. 
 
+# Referencias: 
+
+[1] Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556.
+[2] Base de datos descargada desde: https://www.kaggle.com/chetankv/dogs-cats-images [10 de feb de 2020].
