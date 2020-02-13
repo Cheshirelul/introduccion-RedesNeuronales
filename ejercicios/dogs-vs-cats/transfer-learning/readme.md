@@ -18,3 +18,4 @@ Se recomienda realizar el ejercicio y modificar los valores de hiperparámetros.
 
 [1] Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556.
 [2] Base de datos descargada desde: https://www.kaggle.com/chetankv/dogs-cats-images [10 de feb de 2020].
+[3] Consulta de referencia: https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/ [13 de feb de 2020].
