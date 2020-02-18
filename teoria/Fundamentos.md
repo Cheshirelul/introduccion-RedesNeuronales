@@ -19,19 +19,19 @@ Mediante este entrenamiento o aprendizaje, las RNA crean su propia representaci�
 - Funcionan en paralelo
   - Muchas neuronas pueden estar trabajando al mismo tiempo
 
-<center><img src="neuronaBiologica.png"></center>
+<center><img src="img/neuronaBiologica.png"></center>
 
 # Elementos básicos
 
 A continuación se muestra la estructura básica de una red neuronal.
 
-<center><img src="redNeuronal.png"></center>
+<center><img src="img/redNeuronal.png"></center>
 
 La misma está constituida por neuronas interconectadas y arregladas en tres capas (esto último puede variar). Los datos ingresan por medio de la “capa de entrada”, pasan a través de la “capa oculta” y salen por la “capa de salida”. Cabe mencionar que la capa oculta puede estar constituida por varias capas.
 
 Ahora que ya se explico un poco la estructura básica de una red neuronal y su parentezco con una red biologica vamos a hacer una comparacion un poco más grafica.
 
-<center><img src="comparacionBiovsArt.png"></center>
+<center><img src="img/comparacionBiovsArt.png"></center>
 
 *Biológicamente, se suele aceptar que el conocimiento está más relacionado con las conexiones entre neuronas que con las propias neuronas* (Alkon, 1989;Shepherd, 1990);
 es decir, el conocimiento se encuentra distribuido por las sinapsis de la red. De forma análoga, en el caso de las RNA se puede considerar que el conocimiento se encuentra representado en los pesos de las conexiones entre neuronas.
@@ -50,6 +50,10 @@ Una neurona biológica puede estar activa (excitada) o inactiva (no excitada); e
 El último componente que una neurona necesita es la función de salida. El valor resultante de esta función es la salida de la neurona i (outi); por ende, la función de salida determina que valor se transfiere a las neuronas vinculadas. Si la función de activación está por debajo de un umbral determinado, ninguna salida se pasa a la neurona subsiguiente. Normalmente, no cualquier valor es permitido como una entrada para una neurona, por lo tanto, los valores de salida están comprendidos en el rango [0, 1] o [-1, 1]. También pueden ser binarios {0, 1} o {-1, 1}.
 
 La función activación calcula el estado de actividad de una neurona; transformando la entrada global (menos el umbral, Θi) en un valor (estado) de activación, cuyo rango normalmente va de (0 a 1) o de (–1 a 1). Esto es así, porque una neurona puede estar totalmente inactiva (0 o –1) o activa (1).
+
+## Función de perdida (loss function)
+
+Es un método para evaluar qué tan bien el algoritmo específico modela los datos dados. Si las predicciones se desvian mucho del resultado actual, loss function capturaria un número muy alto. Gradualmente, con la ayuda de algunas funciones de optimizacion, loss function aprende a reducir el error en en la predicción.
 
 # Niveles o capas de una red neuronal
 

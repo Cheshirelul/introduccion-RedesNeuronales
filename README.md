@@ -20,6 +20,7 @@ En este repositorio se abarcaran temas introductorios a las redes neruonales tan
 - Matich, D. J. (2001). Redes Neuronales: Conceptos básicos y aplicaciones. Universidad Tecnológica Nacional, México.
 - Ultera Burgal J. (2018) Deep Learning básico con Keras (Parte 3): VGG [online] enmilocalfunciona. Available at: <https://enmilocalfunciona.io/deep-learning-basico-con-keras-parte-3-vgg/> [Accessed 7 Feb. 2020]
 - Mirjalili, V. (2018). What does the "same" padding parameter in convolution mean in TensorFlow?. [online] Quora. Availabe at: <https://www.quora.com/What-does-the-same-padding-parameter-in-convolution-mean-in-TensorFlow> [Accessed 12 Feb. 2020].
-- Pai, P. (2017). Data Augmentation Techniques in CNN using Tensorflow. [online] Medoim. Available at: <https://medium.com/@prasad.pai/data-augmentation-techniques-in-cnn-using-tensorflow-371ae43d5be9> [Accessed 17 Feb., 2020].
+- Pai, P. (2017). Data Augmentation Techniques in CNN using Tensorflow. [online] Medium. Available at: <https://medium.com/@prasad.pai/data-augmentation-techniques-in-cnn-using-tensorflow-371ae43d5be9> [Accessed 17 Feb., 2020].
+- Keras. (s.f.). Keras: The Python Deep Learning library. [online] Keras. Available at:  <https://keras.io/>
 
 Puedes encontrar más referencias en libros recomendados. Disponibles en: <https://machinelearningmastery.com/machine-learning-books/> [Consultado el 13 de Feb., 2020].

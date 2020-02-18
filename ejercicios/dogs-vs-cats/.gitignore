@@ -7,3 +7,6 @@ dogs_vs_cats_labels.npy
 dogs_vs_cats_photos.npy
 test1.zip
 train.zip
+vgg19.ipynb
+n-dogs-cats.ipynb
+Dogs-Cats.ipynb
